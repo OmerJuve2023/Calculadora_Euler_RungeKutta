@@ -1,21 +1,21 @@
 package datos;
 
-public class datos {
-    private String funcion;
+public class dates {
+    private String function;
     private double h;
     private double x1;
     private double y1;
     private int N;
 
-    public datos() {
+    public dates() {
     }
 
-    public String getFuncion() {
-        return funcion;
+    public String getFunction() {
+        return function;
     }
 
-    public void setFuncion(String funcion) {
-        this.funcion = funcion;
+    public void setFunction(String function) {
+        this.function = function;
     }
 
     public double getH() {

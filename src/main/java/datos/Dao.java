@@ -13,12 +13,12 @@ public class Dao implements esqueleto {
 
     @Override
     public void salida(double[] x, double[] y, int N) {
-        DecimalFormat formato = new DecimalFormat("##00.######");
+        DecimalFormat format = new DecimalFormat("##00.######");
         DecimalFormat form = new DecimalFormat("#0.00");
-        System.out.println("iteracciones" + "\t" + "\t" + "X" + "\t" + "\t" + "\t" + "y");
+        System.out.println("interactions" + "\t" + "\t" + "X" + "\t" + "\t" + "\t" + "y");
         for (int i = 0; i < N; i++) {
             System.out.println("\t" + (i + 1) + "\t" + "|\t" + "\t" + form.format(x[i]) +
-                    "\t" + "|\t" + formato.format(y[i]));
+                    "\t" + "|\t" + format.format(y[i]));
         }
     }
 
@@ -69,9 +69,9 @@ public class Dao implements esqueleto {
     }
 
     @Override
-    public double[] ejecucion_x(double inicial, int N, double h) {
+    public double[] ejecucion_x(double initial, int N, double h) {
         double[] x = new double[N];
-        x[0] = inicial;
+        x[0] = initial;
         for (int i = 1; i < N; i++) {
             x[i] = x[i - 1] + h;
         }

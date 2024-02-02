@@ -1,6 +1,6 @@
 package ejecutable;
 
-import metodo_euler.metodo_euler;
+import metodo_euler.methods_euler;
 import metodo_runge_kutta.metodo_runge_kutta;
 import pdf.desarrollo;
 import pdf.union;
@@ -16,11 +16,11 @@ public class ejecutable {
 
     public void euler() {
         des.estilo();
-        metodo_euler eu = new metodo_euler();
+        methods_euler eu = new methods_euler();
         eu.ingreso();
         eu.x = eu.ejecucion_x(eu.euler.getX1(), eu.euler.getN(), eu.euler.getH());
         eu.ejecucion_y();
-        eu.salidita(eu.euler.getH(), eu.euler.getFuncion(), eu.euler.getX1(), eu.euler.getY1(), eu.euler.getN(), eu.x);
+        eu.salidita(eu.euler.getH(), eu.euler.getFunction(), eu.euler.getX1(), eu.euler.getY1(), eu.euler.getN(), eu.x);
         //eu.salida(eu.x, eu.y, eu.euler.getN());
         //eu.grafica(eu.euler.getFuncion(), eu.x, eu.y);
         //union.init(eu.x, eu.y);
