@@ -15,8 +15,6 @@ public enum Colors {
             case CYAN -> " \033[36m ";
             case WHITE -> " \033[37m ";
             case RESET -> " \033[0m ";
-            default -> null;
         };
     }
-
 }
