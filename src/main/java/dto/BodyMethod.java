@@ -1,6 +1,6 @@
-package datos;
+package dto;
 
-public interface esqueleto {
+public interface BodyMethod {
     void ingress();
 
     double[] ejection_x(double initial, int N, double h);

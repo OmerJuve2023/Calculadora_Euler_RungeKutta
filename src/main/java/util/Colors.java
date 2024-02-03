@@ -1,4 +1,4 @@
-package Colores;
+package util;
 
 public enum Colors {
 
@@ -6,7 +6,7 @@ public enum Colors {
 
     public String getColors() {
         return switch (this) {
-            case BLACK -> " \033[30m ";
+            case BLACK -> " \03330m ";
             case RED -> " \033[31m ";
             case GREEN -> " \033[32m ";
             case YELLOW -> " \033[33m ";

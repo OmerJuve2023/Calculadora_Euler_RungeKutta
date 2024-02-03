@@ -1,6 +1,7 @@
-package datos;
+package dto;
 
-import Colores.Operates;
+import entity.Data;
+import util.Operates;
 import org.math.plot.Plot2DPanel;
 import org.nfunk.jep.JEP;
 
@@ -8,7 +9,7 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Dao implements esqueleto {
+public class BodyMethodImpl implements BodyMethod {
     final Scanner scanner = new Scanner(System.in);
     final Operates o = new Operates();
 
@@ -84,12 +85,12 @@ public class Dao implements esqueleto {
 
     }
 
-    public void InsertRequest(dates dates) {
-        double r_final = decimal("rango final:");
-        dates.setH(decimal("INGRESE h: "));
-        dates.setX1(decimal("INGRESE x1: "));
-        dates.setY1(decimal("INGRESE y1: "));
-        dates.setFunction(text("INGRECE FUNCION: F(X,Y)="));
-        dates.setN((int) Math.round(((r_final - dates.getX1()) / dates.getH()) + 1));
+    public void InsertRequest(Data data) {
+        double r_final = decimal("range final:");
+        data.setH(decimal("INGRESS h: "));
+        data.setX1(decimal("INGRESS x1: "));
+        data.setY1(decimal("INGRESS y1: "));
+        data.setFunction(text("INGRESS FUNCTION: F(X,Y)="));
+        data.setN((int) Math.round(((r_final - data.getX1()) / data.getH()) + 1));
     }
 }
