@@ -1,16 +1,16 @@
-package metodo_euler;
+package service;
 
-import Colores.Operates;
-import datos.Dao;
-import datos.dates;
+import util.Operates;
+import dto.BodyMethodImpl;
+import entity.Data;
 
 import java.text.DecimalFormat;
 
-public class methods_euler extends Dao {
+public class MethodEuler extends BodyMethodImpl {
 
     public double[] x;
     public double[] y;
-    public dates euler = new dates();
+    public final Data euler = new Data();
     final Operates c = new Operates();
 
     @Override
