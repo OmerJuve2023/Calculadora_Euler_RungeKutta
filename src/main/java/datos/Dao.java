@@ -1,5 +1,6 @@
 package datos;
 
+import Colores.Operates;
 import org.math.plot.Plot2DPanel;
 import org.nfunk.jep.JEP;
 
@@ -7,25 +8,25 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-
 public class Dao implements esqueleto {
-    Scanner scanner = new Scanner(System.in);
+    final Scanner scanner = new Scanner(System.in);
+    final Operates o = new Operates();
 
     @Override
-    public void salida(double[] x, double[] y, int N) {
+    public void goOut(double[] x, double[] y, int N) {
         DecimalFormat format = new DecimalFormat("##00.######");
         DecimalFormat form = new DecimalFormat("#0.00");
-        System.out.println("interactions" + "\t" + "\t" + "X" + "\t" + "\t" + "\t" + "y");
+        o.println("interactions" + "\t" + "\t" + "X" + "\t" + "\t" + "\t" + "y");
         for (int i = 0; i < N; i++) {
-            System.out.println("\t" + (i + 1) + "\t" + "|\t" + "\t" + form.format(x[i]) +
-                    "\t" + "|\t" + format.format(y[i]));
+            o.println("\t" + (i + 1) + "\t" + "|\t" + "\t" + form.format(x[i]) +
+                      "\t" + "|\t" + format.format(y[i]));
         }
     }
 
     @Override
-    public void grafica(String name, double[] x, double[] y) {
+    public void graffiti(String name, double[] x, double[] y) {
 
-        JFrame panel = new JFrame("grafica");
+        JFrame panel = new JFrame("graph of the function");
         panel.setBounds(370, 10, 400, 350);
         panel.setLocationRelativeTo(null);
         panel.setVisible(true);
@@ -41,7 +42,7 @@ public class Dao implements esqueleto {
     }
 
     @Override
-    public double funcion(String number, double x, double y) {
+    public double function(String number, double x, double y) {
         JEP jep = new JEP();
         jep.addStandardConstants();
         jep.addStandardFunctions();
@@ -53,23 +54,23 @@ public class Dao implements esqueleto {
 
     @Override
     public double decimal(String name) {
-        System.out.print(name);
+        o.print(name);
         return Double.parseDouble(scanner.nextLine());
     }
 
     @Override
     public String text(String name) {
-        System.out.print(name);
+        o.print(name);
         return scanner.next();
     }
 
     @Override
-    public void ingreso() {
+    public void ingress() {
 
     }
 
     @Override
-    public double[] ejecucion_x(double initial, int N, double h) {
+    public double[] ejection_x(double initial, int N, double h) {
         double[] x = new double[N];
         x[0] = initial;
         for (int i = 1; i < N; i++) {
@@ -79,7 +80,16 @@ public class Dao implements esqueleto {
     }
 
     @Override
-    public void ejecucion_y() {
+    public void ejection_y() {
 
+    }
+
+    public void InsertRequest(dates dates) {
+        double r_final = decimal("rango final:");
+        dates.setH(decimal("INGRESE h: "));
+        dates.setX1(decimal("INGRESE x1: "));
+        dates.setY1(decimal("INGRESE y1: "));
+        dates.setFunction(text("INGRECE FUNCION: F(X,Y)="));
+        dates.setN((int) Math.round(((r_final - dates.getX1()) / dates.getH()) + 1));
     }
 }

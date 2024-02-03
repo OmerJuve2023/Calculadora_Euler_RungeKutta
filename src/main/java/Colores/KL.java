@@ -13,7 +13,6 @@ public enum KL {
             case l2 -> "L" + "\u2082";
             case l3 -> "L" + "\u2083";
             case l4 -> "L" + "\u2084";
-            default -> null;
         };
     }
 }

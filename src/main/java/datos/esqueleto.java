@@ -1,19 +1,19 @@
 package datos;
 
 public interface esqueleto {
-    void ingreso();
+    void ingress();
 
-    double[] ejecucion_x(double inicial, int N, double h);
+    double[] ejection_x(double initial, int N, double h);
 
-    void ejecucion_y();
+    void ejection_y();
 
     String text(String name);
 
-    double funcion(String number, double x, double y);
+    double function(String number, double x, double y);
 
     double decimal(String name);
 
-    void salida(double[] x, double[] y, int N);
+    void goOut(double[] x, double[] y, int N);
 
-    void grafica(String name,double []x,double []y);
+    void graffiti(String name, double []x, double []y);
 }
