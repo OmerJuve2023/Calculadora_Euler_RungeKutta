@@ -22,8 +22,6 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: OmerJuve2023/CreatePDF
-        run: |
-          mvn clean package
       
       - name: Install createPng dependency
         run: mvn install:install-file -Dfile=target/createPng.jar -DgroupId=org.example -DartifactId=createPng -Dversion=1.0 -Dpackaging=jar
