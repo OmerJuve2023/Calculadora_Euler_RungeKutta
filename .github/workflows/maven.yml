@@ -23,13 +23,13 @@ jobs:
         with:
           repository: OmerJuve2023/CreatePDF
 
-      - name: Debug
-        run: ls -la
-        working-directory: CreatePDF
+      # - name: Debug
+      #   run: ls -la
+      #   working-directory: CreatePDF
 
-      - name: Install createPng dependency
-        run: mvn install:install-file -Dfile=target/createPng.jar -DgroupId=org.example -DartifactId=createPng -Dversion=1.0 -Dpackaging=jar
-        working-directory: CreatePDF
+      # - name: Install createPng dependency
+      #   run: mvn install:install-file -Dfile=target/createPng.jar -DgroupId=org.example -DartifactId=createPng -Dversion=1.0 -Dpackaging=jar
+      #   working-directory: CreatePDF
 
-      - name: Build with Maven
-        run: mvn clean install
+      # - name: Build with Maven
+      #   run: mvn clean install
