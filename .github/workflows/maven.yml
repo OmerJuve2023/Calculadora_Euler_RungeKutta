@@ -21,7 +21,7 @@ jobs:
       - name: Checkout createPng repository
         uses: actions/checkout@v2
         with:
-          repository: https://github.com/OmerJuve2023/CreatePDF.git
+          repository: OmerJuve2023/CreatePDF
           path: path/to/createPng
 
       - name: Compile and package createPng
