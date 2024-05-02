@@ -22,10 +22,10 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: OmerJuve2023/CreatePDF
-
+        
       - name: Compile and package createPng
         run: |
-          cd CreatePDF
+          # cd CreatePDF
           mvn clean package
         working-directory: CreatePDF
 
